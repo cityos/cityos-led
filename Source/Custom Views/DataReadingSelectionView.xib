@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Arcon-Regular.ttf">
+            <string>Arcon-Regular</string>
+            <string>Arcon-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DataReadingSelectionView" customModule="demo_led" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Mhw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCg-Ym-40K">
+                    <rect key="frame" x="271" y="54" width="58.5" height="16"/>
+                    <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2O-8s-qdH">
+                    <rect key="frame" x="270" y="8" width="60" height="36"/>
+                    <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="20"/>
+                    <state key="normal" title="Energy">
+                        <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="mainButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="H07-xa-gnJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xg3-ba-iy4">
+                    <rect key="frame" x="338" y="19" width="16" height="22"/>
+                    <color key="tintColor" white="1" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="select-down-icon"/>
+                    <connections>
+                        <action selector="mainButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="2h7-SZ-aMP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFu-Vm-Vfy">
+                    <rect key="frame" x="234" y="15" width="26" height="26"/>
+                    <state key="normal" image="data-energy-white"/>
+                    <connections>
+                        <action selector="mainButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="kQ9-Ds-1bu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="p2O-8s-qdH" firstAttribute="leading" secondItem="bFu-Vm-Vfy" secondAttribute="trailing" constant="10" id="5mF-2i-eGE"/>
+                <constraint firstItem="xg3-ba-iy4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-6" id="6IE-cf-Mnw"/>
+                <constraint firstItem="vCg-Ym-40K" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MGX-8v-eJs"/>
+                <constraint firstAttribute="bottom" secondItem="vCg-Ym-40K" secondAttribute="bottom" constant="2" id="Ovu-8K-y70"/>
+                <constraint firstItem="p2O-8s-qdH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="S6n-qp-zKX"/>
+                <constraint firstItem="p2O-8s-qdH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-10" id="UPg-dE-xb6"/>
+                <constraint firstItem="bFu-Vm-Vfy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-8" id="V9c-dh-sXp"/>
+                <constraint firstItem="xg3-ba-iy4" firstAttribute="leading" secondItem="p2O-8s-qdH" secondAttribute="trailing" constant="8" id="vec-jg-1Tm"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconButton" destination="bFu-Vm-Vfy" id="uWJ-qW-63i"/>
+                <outlet property="identifier" destination="vCg-Ym-40K" id="h1n-Bo-qUb"/>
+                <outlet property="mainButton" destination="p2O-8s-qdH" id="MRg-g0-u4F"/>
+            </connections>
+            <point key="canvasLocation" x="563" y="38"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="data-energy-white" width="26" height="26"/>
+        <image name="select-down-icon" width="16" height="16"/>
+    </resources>
+</document>

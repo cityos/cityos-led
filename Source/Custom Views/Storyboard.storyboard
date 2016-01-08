@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Arcon-Regular.ttf">
+            <string>Arcon-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Lamp Detail Charts-->
+        <scene sceneID="9KT-7v-J4U">
+            <objects>
+                <viewController storyboardIdentifier="LampDetailChartsController" title="Lamp Detail Charts" id="qGE-uE-3Xm" customClass="LampDetailChartsViewController" customModule="demo_led" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qXq-07-u76"/>
+                        <viewControllerLayoutGuide type="bottom" id="E0g-QL-bCi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cjC-wH-Nas">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCd-El-MeX">
+                                <rect key="frame" x="245" y="0.0" width="111" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <state key="normal" title="Energy total MhW" image="data-energy-white">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYB-GA-Nfo">
+                                <rect key="frame" x="0.0" y="26" width="600" height="524"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="MoU-UQ-W67">
+                                <rect key="frame" x="280.5" y="563" width="39" height="37"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last 24 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmA-iN-qeS">
+                                <rect key="frame" x="257" y="551" width="86" height="18"/>
+                                <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.078431372549019607" green="0.70196078431372544" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MoU-UQ-W67" firstAttribute="centerX" secondItem="cjC-wH-Nas" secondAttribute="centerX" id="2gG-qL-oWA"/>
+                            <constraint firstItem="YCd-El-MeX" firstAttribute="top" secondItem="qXq-07-u76" secondAttribute="bottom" id="Iq5-3D-Okc"/>
+                            <constraint firstItem="YmA-iN-qeS" firstAttribute="centerX" secondItem="cjC-wH-Nas" secondAttribute="centerX" id="MbY-4p-VYd"/>
+                            <constraint firstItem="MoU-UQ-W67" firstAttribute="top" secondItem="YmA-iN-qeS" secondAttribute="bottom" constant="-6" id="PPF-qH-yeH"/>
+                            <constraint firstItem="YCd-El-MeX" firstAttribute="centerX" secondItem="cjC-wH-Nas" secondAttribute="centerX" id="h5v-ET-GgH"/>
+                            <constraint firstItem="E0g-QL-bCi" firstAttribute="top" secondItem="MYB-GA-Nfo" secondAttribute="bottom" constant="50" id="hDd-oo-uTQ"/>
+                            <constraint firstItem="E0g-QL-bCi" firstAttribute="top" secondItem="MoU-UQ-W67" secondAttribute="bottom" id="iBC-5u-51v"/>
+                            <constraint firstItem="MYB-GA-Nfo" firstAttribute="leading" secondItem="cjC-wH-Nas" secondAttribute="leading" id="rA4-Rg-bmd"/>
+                            <constraint firstItem="MYB-GA-Nfo" firstAttribute="top" secondItem="YCd-El-MeX" secondAttribute="bottom" id="rJF-In-X9i"/>
+                            <constraint firstAttribute="trailing" secondItem="MYB-GA-Nfo" secondAttribute="trailing" id="vJF-1o-vA4"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="dataIdentifierButton" destination="YCd-El-MeX" id="jq4-2j-7zE"/>
+                        <outlet property="pageControl" destination="MoU-UQ-W67" id="nOh-kP-8VS"/>
+                        <outlet property="scrollView" destination="MYB-GA-Nfo" id="g6o-9R-jFd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdn-D6-Gye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="359"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="data-energy-white" width="26" height="26"/>
+    </resources>
+</document>

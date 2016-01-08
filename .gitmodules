@@ -1,0 +1,3 @@
+[submodule "LightFactory"]
+	path = LightFactory
+	url = https://github.com/cityos/LightFactory.git

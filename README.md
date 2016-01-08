@@ -1,12 +1,9 @@
 # Demo LED iOS application
 
-## Installation
+## Building
 After cloning repository run
 ```bash
-git submodule update --init
+sh build.sh
 ```
-to fetch `LightFactory` framework. After that run carthage update
-```
-carthage update --platform ios
-```
-and go to LightFactory folder and do the same.
+To fetch and build all neccesary dependencies.
+
